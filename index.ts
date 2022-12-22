@@ -11,10 +11,10 @@ const hotWithConnectable = connectable(
     coldByDefault, 
     { connector: () => new Subject()}
 );
-
 //Now all the subscriptions will share the same data stream 
 hotWithConnectable.subscribe((v) => console.log(v)),
 hotWithConnectable.subscribe((v) => console.log(v)), 
 hotWithConnectable.subscribe((v) => console.log(v));
 //connect will start streaming the data
+
 hotWithConnectable.connect();
